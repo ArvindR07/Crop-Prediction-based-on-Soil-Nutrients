@@ -24,7 +24,7 @@ exports.postAddArea = (req, res, next) => {
   const userId = sessionStorage.getItem("userid");
   const area = new Area(id, name, imageurl, pincode, userId);
 
-  const appid = "373c87031dabd7cb08aa0f557fd5d7c0";
+  const appid = "PUT_YOUR_API_KEY";
   const unit = "metric";
   const url =
     "https://api.openweathermap.org/data/2.5/weather?q=" +
