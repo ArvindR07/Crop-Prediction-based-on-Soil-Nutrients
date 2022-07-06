@@ -2,13 +2,10 @@ const User = require("../models/user");
 const Stat = require("../models/stats");
 const Nexmo = require("nexmo");
 const sessionStorage = require("sessionstorage");
-// const accountSid = "AC83cf29774c4438107e4b0f864c9ed103";
-// const authToken = "53c2b0c21e8d42d4e329578bf6cb3178";
-// const client = require("twilio")(accountSid, authToken);
 
 const nexmo = new Nexmo({
-  apiKey: "fb971f63",
-  apiSecret: "3A3YwxQWFHZbFVe7",
+  apiKey: "API_KEY",
+  apiSecret: "API_SECREY_KEY",
 });
 
 exports.getLogin = (req, res, next) => {
@@ -54,7 +51,7 @@ exports.postInsertUser = (req, res, next) => {
   //   })
   //   .then((message) => console.log(message.sid));
 
-  const from = "918903648268";
+  const from = "";
   const to = "91" + phNum;
   const text = `Your ID: ${id} and your password: ${password}`;
   nexmo.message.sendSms(from, to, text);
